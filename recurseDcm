@@ -1,0 +1,9 @@
+#!/bin/bash
+touch dcms.txt
+for i in $(ls -R)
+do
+	echo $i >> dcms.txt
+done
+
+echo $(grep '\.dcm' dcms.txt) > dcms.txt
+
